@@ -6,16 +6,25 @@
 
 body{
     height: 100vh;
+    background-color: midnightblue;
+
+}
+
+header{
+    height: 10vh;
     display: flex;
-    background-color: rgb(245, 184, 109);
+    align-items: center;
+    justify-content: center;
+    background-color: midnightblue;
 }
 
 .jogo{
     width: 640px;
-    height: 640px;
+    height: 540px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    justify-content: center;
     perspective: 1000px;
 
 }
@@ -23,9 +32,9 @@ body{
 .cartao{
     width: calc(25% - 10px);
     height: calc(33,3333% - 10px);
-    margin: 5px;
+    margin: 3px;
     position: relative;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0,3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 0.5s;
