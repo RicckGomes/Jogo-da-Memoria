@@ -14,28 +14,28 @@ var existeCartaoVirado = false;
 
 var primeiroCartao, segundoCartao;
 
-function virarCartao () {
+function virarCartao() {
     this.classList.add("virado");
 
-    if (existeCartaoVirado == false){
+    if (existeCartaoVirado == false) {
         existeCartaoVirado = true;
         primeiroCartao = this;
     } else {
         segundoCartao = this;
-        existeCartaoVirado = true;
+        existeCartaoVirado = false;
         
-        if (primeiroCartao.dataset.info === segundoCartao.dataset.info){
+        if (primeiroCartao.dataset.info === segundoCartao.dataset.info) {
             primeiroCartao.removeEventListener("click", virarCartao);
             segundoCartao.removeEventListener("click", virarCartao);
         } else {
-            setTimeout (function () {
+            setTimeout(function () {
                 primeiroCartao.classList.remove("virado");
                 segundoCartao.classList.remove("virado");
-            }, 2000);
+            }, 1100);
         }
     }
 }
 
-cartoes.forEach(function (cartao){
+cartoes.forEach(function (cartao) {
     cartao.addEventListener("click", virarCartao);
 });
