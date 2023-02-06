@@ -1,71 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Jogo da Memória</title>
-        <link rel="stylesheet" href="./src/css/index.css">
-    </head>
+<html lang="pt">
 
-    <body>
-        <header>
-            <h1 id="nada"></h1>
-        </header>
-        
-        <section class="jogo">
-            <div class="cartao" data-info="corinthians">
-                <img src="./src/assets/imgs/frente/times/corinthians.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div> 
-            <div class="cartao" data-info="corinthians">
-                <img src="./src/assets/imgs/frente/times/corinthians.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <div class="cartao" data-info="fluminense">
-                <img src="./src/assets/imgs/frente/times/fluminense.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
-            <div class="cartao" data-info="fluminense">
-                <img src="./src/assets/imgs/frente/times/fluminense.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/login.css">
 
-            <div class="cartao" data-info="gremio">
-                <img src="./src/assets/imgs/frente/times/gremio.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
-            <div class="cartao" data-info="gremio">
-                <img src="./src/assets/imgs/frente/times/gremio.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
+  <script defer src="./src/js/login.js"></script>
+  <link rel="shortcut icon" href="./src/assets/imgs/cerebro.png" type="cerebro">
+  <title>Jogo da Memória | Login</title>
+</head>
 
-            <div class="cartao" data-info="palmeiras">
-                <img src="./src/assets/imgs/frente/times/palmeiras.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
-            <div class="cartao" data-info="palmeiras">
-                <img src="./src/assets/imgs/frente/times/palmeiras.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
+<body>
 
-            <div class="cartao" data-info="santos">
-                <img src="./src/assets/imgs/frente/times/santos.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
-            <div class="cartao" data-info="santos">
-                <img src="./src/assets/imgs/frente/times/santos.png" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
+  <form class="login-form">
 
-            <div class="cartao" data-info="sao-paulo">
-                <img src="./src/assets/imgs/frente/times/sao-paulo.webp" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div>
-            <div class="cartao" data-info="sao-paulo">
-                <img src="./src/assets/imgs/frente/times/sao-paulo.webp" class="frente-cartao" alt="Frente do cartao">
-                <img src="./src/assets/imgs/verso/wise-hands.png" class="verso-cartao" alt="verso do cartao">
-            </div> 
-        </section>
-       
-        <script src="./src/js/index.js"></script>
-    </body>
+    <div class="login__header">
+      <img src="./src/assets/imgs/cerebro.png" alt="cerebro">
+      <h1>Jogo da Memória</h1>
+    </div>
+
+    <input type="text" placeholder="Nome" class="login__input">
+    <button type="submit" class="login__button">Jogar</button>
+
+  </form>
+
+</body>
+
 </html>

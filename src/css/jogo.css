@@ -4,29 +4,42 @@
     box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: midnightblue;
-
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
 }
 
 header{
-    height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: midnightblue;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-style: oblique;
+    font-size: 1.5em;
+    width: 620px;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 0 15px;
+    border-radius: 5px;
 }
 
 .jogo{
     width: 640px;
+    max-width: 800px;
     height: 540px;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 0 auto;
     justify-content: center;
     perspective: 1000px;
-
+    
 }
 
 .cartao{
@@ -41,9 +54,19 @@ header{
 
 }
 
+.cartao:hover{
+    transform: scale(0.98); 
+}
+
 .cartao:active{
     transform: scale(0.96);
     transition: transform .2s;
+
+}
+
+.desabilitar-cartao{
+    filter: saturate(0);
+    opacity: 0.5;
 
 }
 

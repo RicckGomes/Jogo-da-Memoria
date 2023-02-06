@@ -1,18 +1,24 @@
-var nome = prompt("Olá, qual o seu nome?");
-
-alert(nome + ", seja muito bem vind@!!! Vamos testar sua memória?!");
-
-var h1 = document.getElementById("nada");
-
-h1.innerText = "Boa sorte " + nome;
-
-h1.style.color = "bisque";
-
 var cartoes = document.querySelectorAll(".cartao");
 
 var existeCartaoVirado = false;
 
 var primeiroCartao, segundoCartao;
+
+var spanPlayer = document.querySelector(".jogador");
+
+    var playerName = localStorage.getItem("player");
+    spanPlayer.innerHTML = playerName;
+
+var tempo = document.querySelector(".tempo");
+
+    var startTempo = () => {
+        this.loop = setInterval(() => {
+            var tempoAtual = +tempo.innerHTML;
+            tempo.innerHTML = tempoAtual + 1;
+        }, 1000);
+}
+
+startTempo();
 
 function virarCartao() {
     this.classList.add("virado");
@@ -36,6 +42,9 @@ function virarCartao() {
     }
 }
 
+
+
 cartoes.forEach(function (cartao) {
     cartao.addEventListener("click", virarCartao);
 });
+
