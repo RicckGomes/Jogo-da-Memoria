@@ -1,9 +1,11 @@
-const input = document.querySelector('.login__input');
-const button = document.querySelector('.login__button');
-const form = document.querySelector('.login-form');
+var input = document.querySelector('.login__input');
+var button = document.querySelector('.login__button');
+var form = document.querySelector('.login-form');
 
-const validateInput = ({ target }) => {
-  if (target.value.length > 3) {
+button.setAttribute('disabled', '');
+
+var validateInput = ({ target }) => {
+  if (target.value.length > 2) {
     button.removeAttribute('disabled');
     return;
   }
@@ -11,7 +13,7 @@ const validateInput = ({ target }) => {
   button.setAttribute('disabled', '');
 }
 
-const handleSubmit = (event) => {
+var handleSubmit = (event) => {
   event.preventDefault();
 
   localStorage.setItem('player', input.value);
